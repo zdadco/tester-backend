@@ -6,7 +6,7 @@ import ru.zdadco.tester.controller.dto.AnswersRequest;
 import ru.zdadco.tester.model.Test;
 import ru.zdadco.tester.service.TestService;
 
-@CrossOrigin(origins = {"http://localhost:3000"})
+@CrossOrigin(origins = {"http://188.68.218.222:3000"})
 @RestController
 @RequestMapping("/api/v1/test")
 @RequiredArgsConstructor

@@ -21,11 +21,11 @@ public class MailService {
 
         MimeMessageHelper helper = new MimeMessageHelper(message, true);
 
-        helper.setFrom("");
+        helper.setFrom("zikfridpro@gmail.com");
         helper.setTo(email);
         helper.setSubject("Результат тестирования");
         helper.setText("Благодарим за прохождение теста.\nРезультаты в прикрепленном е письму файле.");
-        helper.addAttachment("Invoice", file);
+        helper.addAttachment("Результат.xlsx", file);
 
         emailSender.send(message);
     }

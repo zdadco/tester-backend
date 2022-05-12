@@ -32,10 +32,9 @@ public class TestService {
 
         try {
             File resultFile = resultBuilderService.buildResult(test, answers);
-//            mailService.sendResult(email, resultFile);
-            Files.write(resultFile.toPath(), new FileInputStream(resultFile).readAllBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
+            mailService.sendResult(email, resultFile);
+        } catch (IOException | MessagingException e) {
+            throw new RuntimeException(e);
         }
 
         if (shareAnswers) {
